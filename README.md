@@ -1,2 +1,41 @@
-# toxic-comments-classification
-Educational project from Yandex.Practicum
+# Классификация токсичных комментариев
+
+Условный интернет-магазин запускает новый сервис - теперь пользователи могут редактировать и дополнять описания товаров, то есть клиенты предлагают свои правки и комментируют изменения других. Магазину нужен инструмент, который будет искать токсичные комментарии и отправлять их на модерацию. 
+
+Необходимо обучить модель классифицировать комментарии на позитивные и негативные. В распоряжении набор данных с разметкой о токсичности правок.
+
+
+## Stack
+- Pandas
+- Numpy
+- Seaborn
+- WordCloud
+- NLTK
+- TfidfVectorizer
+- MultinomialNB
+- SGDClassifier
+- RandomForestClassifier
+- LogisticRegression
+
+
+## Вывод
+
+Для обучения использовались сл. алгоритмы:
+
+- `Naive Bayes Classifier`;
+- `Linear Support Vector Machine`;
+- `Random Forest Classifier`;
+- `Logistic Regression`.
+
+При подготовке признаков классы были сбалансированы техникой `downsampling` - далее выборка была разделена на обучающую и тестовую в соотношении 75:25.
+
+Для моделей `Linear Support Vector Machine`, `Random Forest Classifier`, `Logistic Regression` выполнен подбор наилучших параметров.
+
+Векторизация выполнена при помощи `Tfidfvectorizer`.
+
+Качество моделей оценено кросс-валидацией с пятью блоками.
+
+Все четыре модели показали хороший результат на тренировочной выборке. Качество предсказаний на тестовой на наилучших моделях - `Linear Support Vector Machine - sgd` и `Logistic Regression - lr` показало сл. результаты F-меры:
+- для Linear Support Vector Machine: `0.875`;
+- для Logistic Regression: `0.884`.
+
