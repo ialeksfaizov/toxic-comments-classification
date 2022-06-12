@@ -45,9 +45,11 @@
 Все четыре модели показали хороший результат на тренировочной выборке. На тестовой же выборке порог качества в не менее 0.75 показали модели - Linear Support Vector Machine и Logistic Regression.
 
 Score for Linear Support Vector Machine on the test set: `0.754`
+
 ![error_matrix SGD](https://user-images.githubusercontent.com/94479037/173242301-061798cb-afcc-45ea-bec8-1bc6ae23c045.png)
 
 Score for Logistic Regression on the test set: `0.752`
+
 ![error_matrix LR](https://user-images.githubusercontent.com/94479037/173242316-8394e1d8-b2d9-41fe-af7c-5a53af7ce83e.png)
 
 
